@@ -1,0 +1,1052 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../2.Objectius/">
+      
+      
+        <link rel="next" href="../4.Metodologia/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>3. Continguts - Programació de serveis i processos - Sebastian Ciscar</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#continguts-del-modul-unitats-didactiques" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../.." title="Programació de serveis i processos - Sebastian Ciscar" class="md-header__button md-logo" aria-label="Programació de serveis i processos - Sebastian Ciscar" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programació de serveis i processos - Sebastian Ciscar
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Continguts
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Presentacio
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../1.Presentacio/" class="md-tabs__link">
+        
+  
+    
+  
+  1. Presentació
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../2.Objectius/" class="md-tabs__link">
+        
+  
+    
+  
+  2. Objectius, RA i CA
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  3. Continguts
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../4.Metodologia/" class="md-tabs__link">
+        
+  
+    
+  
+  4. Metodologia
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../5.Avaluacio/" class="md-tabs__link">
+        
+  
+    
+  
+  5. Avaluació
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exercicis/exercicis_variables/" class="md-tabs__link">
+        
+  
+    
+  
+  Exercicis
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exercicis/exercicis_variables/" class="md-tabs__link">
+        
+  
+    
+  
+  1. Variables
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exercicis/exercicis_fluxe/" class="md-tabs__link">
+        
+  
+    
+  
+  2. Fluxe de control
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exercicis/exercicis_funcions/" class="md-tabs__link">
+        
+  
+    
+  
+  3. Funcions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exercicis/exercicis_poo/" class="md-tabs__link">
+        
+  
+    
+  
+  4. POO
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exercicis/exercicis_edd/" class="md-tabs__link">
+        
+  
+    
+  
+  5. EDD
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programació de serveis i processos - Sebastian Ciscar" class="md-nav__button md-logo" aria-label="Programació de serveis i processos - Sebastian Ciscar" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Programació de serveis i processos - Sebastian Ciscar
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Presentacio
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1.Presentacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Presentació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2.Objectius/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Objectius, RA i CA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Continguts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3. Continguts
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continguts-per-unitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continguts per unitat
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4.Metodologia/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Metodologia
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5.Avaluacio/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Avaluació
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercicis/exercicis_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exercicis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercicis/exercicis_variables/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Variables
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercicis/exercicis_fluxe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Fluxe de control
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercicis/exercicis_funcions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Funcions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercicis/exercicis_poo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exercicis/exercicis_edd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. EDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#continguts-per-unitat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continguts per unitat
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="continguts-del-modul-unitats-didactiques">Continguts del mòdul. Unitats didàctiques</h1>
+<p>Els continguts del mòdul s'organitzen en les següents unitats didàctiques:</p>
+<ul>
+<li><strong>UD1.</strong> Programació multiprocés</li>
+<li><strong>UD2.</strong> Programació multifil. Corrutines.</li>
+<li><strong>UD3.</strong> Programació de comunicacions en xarxa. Serveis amb Kotlin.</li>
+<li><strong>UD4.</strong> Programació concurrent amb NodeJS</li>
+<li><strong>UD5.</strong> Serveis amb NodeJS</li>
+</ul>
+<h2 id="continguts-per-unitat">Continguts per unitat</h2>
+<p>Els continguts per cada unitat seran:</p>
+<p><strong><em>UD1. Programació multiprocés</em></strong></p>
+<ul>
+<li>Els Processos i el sistema operatiu<ul>
+<li>Executables. Processos. Serveis.</li>
+<li>Estats d'un procés.</li>
+<li>Fils.</li>
+<li>Dimonis i serveis</li>
+<li>Planificació de processos</li>
+<li>Comunicació entre processos.</li>
+<li>Gestió de processos. Monitoratge.</li>
+<li>Sincronització entre processos.</li>
+</ul>
+</li>
+<li>Programació multiprocés<ul>
+<li>Programació concurrent.</li>
+<li>Programació paral·lela i distribuïda.</li>
+<li>Les classes Runtime i Process</li>
+</ul>
+</li>
+<li>Creació de processos a Java.<ul>
+<li>ProcessBuilder</li>
+</ul>
+</li>
+<li>Gestió de l'entrada i eixida de processos en Java<ul>
+<li>Connexió de la E/S entre Java i processos </li>
+<li>Redireccions a fitxers, mitjançant E/S i mitjançant ProcessBuilder</li>
+</ul>
+</li>
+<li>Programació multiprocés<ul>
+<li>Programació d'aplicacions multiprocés</li>
+</ul>
+</li>
+<li>Creació de processos del sistema</li>
+<li>Anàlisi dels principals mecanismes per a la creació de processos</li>
+<li>Gestió de l'entrada i eixida de processos.</li>
+</ul>
+<p><strong><em>UD2. Programació multifil. Corrutines.</em></strong></p>
+<ul>
+<li>Threads <ul>
+<li>Les classe Thread i Runtime</li>
+<li>Estats d'un fil. Canvis d'estat.</li>
+<li>Context d'execució. Recursos compartits.</li>
+<li>Elements relacionats amb la programació de fils. Llibreries i classes.</li>
+</ul>
+</li>
+<li>La interfície Runnable</li>
+<li>Mètodes sincronitzats<ul>
+<li>Recursos compartits pels fils.</li>
+<li>Gestió de fils. Prioritats.</li>
+<li>Sincronització de fils.</li>
+<li>Compartició d'informació entre fils. Problemes.</li>
+</ul>
+</li>
+<li>Coordinació de Threads<ul>
+<li>El problema del productor-consumidor</li>
+<li>Programació d'aplicacions multifil.</li>
+</ul>
+</li>
+<li>Corrutines en Kotlin</li>
+</ul>
+<p><strong><em>UD3. Programació de comunicacions en xarxa. Serveis amb Kotlin.</em></strong></p>
+<ul>
+<li>Programació de comunicacions en xarxa:<ul>
+<li>Comunicació entre aplicacions.</li>
+<li>Rols client i servidor.</li>
+</ul>
+</li>
+<li>Llibreries per a la programació d'aplicacions en xarxa. Sockets.<ul>
+<li>La classe URL</li>
+<li>Elements de programació d'aplicacions en xarxa. Llibreries.</li>
+<li>Sockets. Tipus. Característiques.</li>
+<li>Creació de sockets.</li>
+<li>Enllaçat i establiment de connexions.</li>
+<li>Utilització de sockets per a la transmissió i recepció d'informació.</li>
+</ul>
+</li>
+<li>Aplicacions client-servidor<ul>
+<li>Programació d'aplicacions client i servidor.</li>
+<li>Utilització de fils en la programació d'aplicacions en xarxa.</li>
+</ul>
+</li>
+<li>Comunicacions i programació multifil</li>
+<li>Utilització de tècniques de programació segura:<ul>
+<li>Pràctiques de programació segura.</li>
+<li>Criptografia de clau pública i clau privada.</li>
+<li>Principals aplicacions de la criptografia</li>
+<li>Protocols criptogràfics.</li>
+<li>Política de seguretat. </li>
+<li>Programació de mecanismes de control d'accés.</li>
+<li>Encriptació d'informació.</li>
+<li>Protocols segurs de comunicacions. </li>
+<li>Programació d'aplicacions amb comunicacions segures. </li>
+</ul>
+</li>
+</ul>
+<p><strong><em>UD4. Programació concurrent amb NodeJS</em></strong></p>
+<ul>
+<li>El framework NodeJS    </li>
+<li>Programació de comunicacions en xarxa:<ul>
+<li>Comunicació entre aplicacions.</li>
+<li>Rols client i servidor.</li>
+</ul>
+</li>
+<li>Llibreries per a la programació d'aplicacions en xarxa. Sockets.<ul>
+<li>La classe URL</li>
+<li>Elements de programació d'aplicacions en xarxa. Llibreries.</li>
+<li>Sockets. Tipus. Característiques.</li>
+<li>Creació de sockets.</li>
+<li>Enllaçat i establiment de connexions.</li>
+<li>Utilització de sockets per a la transmissió i recepció d'informació.</li>
+</ul>
+</li>
+<li>Aplicacions client-servidor<ul>
+<li>Programació d'aplicacions client i servidor.</li>
+<li>Utilització de fils en la programació d'aplicacions en xarxa.</li>
+</ul>
+</li>
+<li>Comunicacions i programació multifil</li>
+<li>Utilització de tècniques de programació segura:<ul>
+<li>Pràctiques de programació segura.</li>
+<li>Criptografia de clau pública i clau privada.</li>
+<li>Principals aplicacions de la criptografia</li>
+<li>Protocols criptogràfics.</li>
+<li>Política de seguretat. </li>
+<li>Programació de mecanismes de control d'accés.</li>
+<li>Encriptació d'informació.</li>
+<li>Protocols segurs de comunicacions. </li>
+<li>Programació d'aplicacions amb comunicacions segures. </li>
+<li>El llenguatge Javascript</li>
+<li>Instal·lació de nodeJS</li>
+<li>Execució d'scripts</li>
+</ul>
+</li>
+<li>El gestor de paquets NPM<ul>
+<li>Creació de paquets</li>
+<li>Execució de paquets</li>
+<li>Instal·lació de paquets</li>
+<li>El mòdul fs</li>
+</ul>
+</li>
+<li>Concurrència en nodejs<ul>
+<li>Asincronía</li>
+<li>Concurrència</li>
+<li>El bucle d'esdeveniments (event loop)</li>
+<li>L'objecte Process de nodejs</li>
+<li>El mòdul OS</li>
+<li>El mòdul Child Process</li>
+</ul>
+</li>
+</ul>
+<p><strong><em>UD5. Serveis amb NodeJS</em></strong></p>
+<ul>
+<li>Serveis en xarxa</li>
+<li>Protocols estàndard  de comunicació a nivell d'aplicació (telnet, http, etc)</li>
+<li>Web Services<ul>
+<li>Components</li>
+<li>Arquitectura</li>
+<li>Serveis REST</li>
+</ul>
+</li>
+<li>Programació de servidors: La llibrería ExpressJS<ul>
+<li>Middleware</li>
+<li>Endpoints</li>
+<li>Peticions GET/POST</li>
+<li>Autenticació basada en rols: JWT</li>
+</ul>
+</li>
+<li>Microserveis<ul>
+<li>Contenidors: Docker</li>
+<li>Docker Compose</li>
+<li>Desplegament de serveis</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">En ressum... què anem a vore en el mòdul?</p>
+<p>La idea principal d'aquest mòdul és que coneixeu diferents mecanismes i tecnologies per crear aplicacions que oferisquen serveis i que treballen de forma concurrent. Se centrarà sobretot en la part de programació de servidors, però molts conceptes ens aprofitaran també per entendre com funcionen aplicacions del costat del client.</p>
+</div>
+<h1 id="temporalitzacio-de-continguts">Temporalització de continguts</h1>
+<p>La temporalització de continguts prevista serà la següent:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">1r Trimestre</th>
+<th style="text-align: center;">2n Trimestre</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">UD1, UD2, UD3</td>
+<td style="text-align: center;">UD4, UD5</td>
+</tr>
+<tr>
+<td style="text-align: center;"><em>Avaluació: 3 - 5 h.</em></td>
+<td style="text-align: center;"><em>Avaluació: 3 - 5 h.</em></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+          
+          <a href="../2.Objectius/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: 2. Objectius, RA i CA">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                2. Objectius, RA i CA
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../4.Metodologia/" class="md-footer__link md-footer__link--next" aria-label="Següent: 4. Metodologia">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                4. Metodologia
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Sebastian Ciscar - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
