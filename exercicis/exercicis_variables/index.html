@@ -1,0 +1,1617 @@
+
+<!doctype html>
+<html lang="ca" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Sebastian Ciscar">
+      
+      
+      
+      
+        <link rel="next" href="../exercicis_fluxe/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Exercicis de Kotlin variables i tipus de dades - Programació de serveis i processos - Sebastian Ciscar</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#exercicis-de-kotlin-variables-i-tipus-de-dades" class="md-skip">
+          Salta el contingut
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Capçalera">
+    <a href="../.." title="Programació de serveis i processos - Sebastian Ciscar" class="md-header__button md-logo" aria-label="Programació de serveis i processos - Sebastian Ciscar" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Programació de serveis i processos - Sebastian Ciscar
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Exercicis de Kotlin variables i tipus de dades
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format oscur"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Format oscur" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Format clar"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Format clar" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Pestanyes" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  variables
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exercicis_fluxe/" class="md-tabs__link">
+        
+  
+    
+  
+  Control de flux
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exercicis_funcions/" class="md-tabs__link">
+        
+  
+    
+  
+  Funcions
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exercicis_poo/" class="md-tabs__link">
+        
+  
+    
+  
+  POO
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../exercicis_edd/" class="md-tabs__link">
+        
+  
+    
+  
+  EDD
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegació" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Programació de serveis i processos - Sebastian Ciscar" class="md-nav__button md-logo" aria-label="Programació de serveis i processos - Sebastian Ciscar" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Programació de serveis i processos - Sebastian Ciscar
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    variables
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    variables
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-i-tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Variables i Tipus de Dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Variables i Tipus de Dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 1.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 1.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 1.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-declaracio-explicita-de-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Declaració explícita de tipus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Declaració explícita de tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 2.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 2.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 2.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inferencia-de-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Inferència de tipus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Inferència de tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 3.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 3.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 3.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-concatenacio-de-cadenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Concatenació de cadenes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Concatenació de cadenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 4.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 4.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-43" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 4.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-plantilles-de-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Plantilles de cadena
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Plantilles de cadena">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-51" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 5.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-52" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 5.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-53" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 5.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-null-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Null Safety
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Null Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-61" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 6.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 6.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 6.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conversio-de-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Conversió de tipus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Conversió de tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-71" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 7.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 7.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-73" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 7.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-treballant-amb-el-tipus-char" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Treballant amb el tipus Char
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Treballant amb el tipus Char">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-81" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 8.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-82" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 8.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-83" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 8.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-operacions-aritmetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Operacions aritmètiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Operacions aritmètiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-91" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 9.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-92" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 9.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-93" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 9.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercicis_fluxe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Control de flux
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercicis_funcions/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funcions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercicis_poo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    POO
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exercicis_edd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EDD
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Taula de continguts">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Taula de continguts
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-variables-i-tipus-de-dades" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Variables i Tipus de Dades
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Variables i Tipus de Dades">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 1.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 1.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 1.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-declaracio-explicita-de-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Declaració explícita de tipus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Declaració explícita de tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-21" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 2.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-22" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 2.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-23" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 2.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-inferencia-de-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Inferència de tipus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Inferència de tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-31" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 3.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-32" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 3.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-33" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 3.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-concatenacio-de-cadenes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Concatenació de cadenes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Concatenació de cadenes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-41" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 4.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-42" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 4.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-43" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 4.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-plantilles-de-cadena" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Plantilles de cadena
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Plantilles de cadena">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-51" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 5.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-52" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 5.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-53" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 5.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-null-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Null Safety
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Null Safety">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-61" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 6.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-62" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 6.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-63" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 6.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-conversio-de-tipus" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Conversió de tipus
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Conversió de tipus">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-71" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 7.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-72" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 7.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-73" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 7.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-treballant-amb-el-tipus-char" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Treballant amb el tipus Char
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Treballant amb el tipus Char">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-81" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 8.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-82" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 8.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-83" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 8.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-operacions-aritmetiques" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. Operacions aritmètiques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Operacions aritmètiques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercici-91" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 9.1:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-92" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 9.2:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exercici-93" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exercici 9.3:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="exercicis-de-kotlin-variables-i-tipus-de-dades">Exercicis de Kotlin variables i tipus de dades</h1>
+<h2 id="1-variables-i-tipus-de-dades">1. Variables i Tipus de Dades</h2>
+<h3 id="exercici-11">Exercici 1.1:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>var</code> que continga el número enter 10 i, després, canvia el seu valor a 20.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="n">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="n">println</span><span class="p">(</span><span class="n">numero</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-12">Exercici 1.2:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>val</code> amb el valor de text "Hola" i intenta canviar el seu valor a "Adéu". Observa l'error que es genera.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">salutacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// salutacio = &quot;Adéu&quot; // Error: Val cannot be reassigned</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="n">println</span><span class="p">(</span><span class="n">salutacio</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-13">Exercici 1.3:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>var</code> amb el valor "Bon dia" i canvia-la a "Bona vesprada".</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bon dia&quot;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Bona vesprada&quot;</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">println</span><span class="p">(</span><span class="n">frase</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="2-declaracio-explicita-de-tipus">2. Declaració explícita de tipus</h2>
+<h3 id="exercici-21">Exercici 2.1:</h3>
+<p><strong>Enunciat:</strong> Declara una variable de tipus <code>Int</code> amb el valor 25 explícitament.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">edat</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">25</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">println</span><span class="p">(</span><span class="n">edat</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-22">Exercici 2.2:</h3>
+<p><strong>Enunciat:</strong> Declara una variable de tipus <code>Double</code> amb el valor 3.14 explícitament.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">pi</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.14</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">println</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-23">Exercici 2.3:</h3>
+<p><strong>Enunciat:</strong> Declara una variable de tipus <code>Boolean</code> amb el valor true.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">esVeritat</span><span class="p">:</span><span class="w"> </span><span class="kt">Boolean</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">println</span><span class="p">(</span><span class="n">esVeritat</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="3-inferencia-de-tipus">3. Inferència de tipus</h2>
+<h3 id="exercici-31">Exercici 3.1:</h3>
+<p><strong>Enunciat:</strong> Declara una variable amb el valor 100 sense especificar el tipus. Què inferix Kotlin?</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">100</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">println</span><span class="p">(</span><span class="n">numero</span><span class="o">::</span><span class="n">class</span><span class="p">)</span><span class="w"> </span><span class="c1">// Class kotlin.Int</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-32">Exercici 3.2:</h3>
+<p><strong>Enunciat:</strong> Declara una variable amb el valor 2.5 sense especificar el tipus. Què inferix Kotlin?</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2.5</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">println</span><span class="p">(</span><span class="n">decimal</span><span class="o">::</span><span class="n">class</span><span class="p">)</span><span class="w"> </span><span class="c1">// Class kotlin.Double</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-33">Exercici 3.3:</h3>
+<p><strong>Enunciat:</strong> Declara una variable amb el text "Kotlin" sense especificar el tipus. Què inferix Kotlin?</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">llenguatge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Kotlin&quot;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">println</span><span class="p">(</span><span class="n">llenguatge</span><span class="o">::</span><span class="n">class</span><span class="p">)</span><span class="w"> </span><span class="c1">// Class kotlin.String</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="4-concatenacio-de-cadenes">4. Concatenació de cadenes</h2>
+<h3 id="exercici-41">Exercici 4.1:</h3>
+<p><strong>Enunciat:</strong> Declara dues variables amb els valors "Hola" i "Món" i concatena-les utilitzant l'operador +.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">part1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hola&quot;</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">part2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Món&quot;</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">resultat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">part1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">part2</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">println</span><span class="p">(</span><span class="n">resultat</span><span class="p">)</span><span class="w"> </span><span class="c1">// Hola Món</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-42">Exercici 4.2:</h3>
+<p><strong>Enunciat:</strong> Crea dues variables que contindran un nom i una edat, i concatena-les en una frase.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Joan&quot;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">edat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">30</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">frase</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;El meu nom és &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; i tinc &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">edat</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; anys.&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="n">println</span><span class="p">(</span><span class="n">frase</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-43">Exercici 4.3:</h3>
+<p><strong>Enunciat:</strong> Declara una variable amb una frase i concatena una altra cadena que l’usuari introduïsca per teclat.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">fraseInicial</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Benvingut, &quot;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">print</span><span class="p">(</span><span class="s">&quot;Introduïx el teu nom: &quot;</span><span class="p">)</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">readLine</span><span class="p">()</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">fraseFinal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fraseInicial</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nom</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="n">println</span><span class="p">(</span><span class="n">fraseFinal</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="5-plantilles-de-cadena">5. Plantilles de cadena</h2>
+<h3 id="exercici-51">Exercici 5.1:</h3>
+<p><strong>Enunciat:</strong> Declara una variable amb el nom "Maria" i utilitza-la dins d'una plantilla de cadena per a mostrar-la.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Maria&quot;</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Hola, </span><span class="si">$</span><span class="n">nom</span><span class="s">!&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-52">Exercici 5.2:</h3>
+<p><strong>Enunciat:</strong> Declara dues variables numèriques, suma-les, i mostra el resultat utilitzant plantilles de cadena.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span>
+<span class="normal"><a href="#__codelineno-13-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;La suma de </span><span class="si">$</span><span class="n">num1</span><span class="s"> i </span><span class="si">$</span><span class="n">num2</span><span class="s"> és </span><span class="si">${</span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span><span class="si">}</span><span class="s">.&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-53">Exercici 5.3:</h3>
+<p><strong>Enunciat:</strong> Utilitza una plantilla de cadena per a mostrar el valor d'una variable dins d'una frase.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">ciutat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;València&quot;</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Estic visitant </span><span class="si">$</span><span class="n">ciutat</span><span class="s"> aquest cap de setmana.&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="6-null-safety">6. Null Safety</h2>
+<h3 id="exercici-61">Exercici 6.1:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>String?</code> nullable i comprova si té un valor abans d’imprimir-la.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nom</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nom</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">     </span><span class="n">println</span><span class="p">(</span><span class="n">nom</span><span class="p">)</span>
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">     </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;La variable és nul·la.&quot;</span><span class="p">)</span>
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="p">}</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-62">Exercici 6.2:</h3>
+<p><strong>Enunciat:</strong> Utilitza l'operador segur (<code>?.</code>) per a accedir a les propietats d’una variable nullable.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nom</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Joan&quot;</span>
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">println</span><span class="p">(</span><span class="n">nom</span><span class="o">?.</span><span class="na">length</span><span class="p">)</span><span class="w"> </span><span class="c1">// Mostra la longitud només si no és null</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-63">Exercici 6.3:</h3>
+<p><strong>Enunciat:</strong> Proporciona un valor predeterminat per a una variable nullable utilitzant l'operador Elvis (<code>?:</code>).</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">nom</span><span class="p">:</span><span class="w"> </span><span class="kt">String?</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">valorPredeterminat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">?:</span><span class="w"> </span><span class="s">&quot;Anònim&quot;</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">println</span><span class="p">(</span><span class="n">valorPredeterminat</span><span class="p">)</span><span class="w"> </span><span class="c1">// Mostra &quot;Anònim&quot;</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="7-conversio-de-tipus">7. Conversió de tipus</h2>
+<h3 id="exercici-71">Exercici 7.1:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>Int</code> amb el valor 50, converteix-la a <code>String</code> i concatena-la amb un text.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">50</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; és un número gran.&quot;</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">println</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-72">Exercici 7.2:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>Double</code> amb el valor 8.7, converteix-la a <code>Int</code>, i mostra el resultat abans i després.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span>
+<span class="normal"><a href="#__codelineno-19-3">3</a></span>
+<span class="normal"><a href="#__codelineno-19-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">decimal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8.7</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Valor original: </span><span class="si">$</span><span class="n">decimal</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">enter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">decimal</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;Convertit a enter: </span><span class="si">$</span><span class="n">enter</span><span class="s">&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-73">Exercici 7.3:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>Char</code> amb el valor 'A' i converteix-la a número utilitzant <code>toInt()</code>.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lletra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">valorNumeric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lletra</span><span class="p">.</span><span class="na">toInt</span><span class="p">()</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="n">println</span><span class="p">(</span><span class="n">valorNumeric</span><span class="p">)</span><span class="w"> </span><span class="c1">// Mostra el valor numèric corresponent al caràcter &#39;A&#39;</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="8-treballant-amb-el-tipus-char">8. Treballant amb el tipus <code>Char</code></h2>
+<h3 id="exercici-81">Exercici 8.1:</h3>
+<p><strong>Enunciat:</strong> Declara una variable <code>Char</code> amb el valor 'B' i mostra el seu valor numèric utilitzant <code>toInt()</code>.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lletra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;B&#39;</span>
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="n">println</span><span class="p">(</span><span class="n">lletra</span><span class="p">.</span><span class="na">toInt</span><span class="p">())</span><span class="w"> </span><span class="c1">// Mostra el valor numèric de &#39;B&#39;</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-82">Exercici 8.2:</h3>
+<p><strong>Enunciat:</strong> Crea una variable <code>Char</code> a partir d’un valor numèric utilitzant <code>toChar()</code>.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">numero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">67</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lletra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numero</span><span class="p">.</span><span class="na">toChar</span><span class="p">()</span>
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">println</span><span class="p">(</span><span class="n">lletra</span><span class="p">)</span><span class="w"> </span><span class="c1">// Mostra el caràcter corresponent al número 67</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-83">Exercici 8.3:</h3>
+<p><strong>Enunciat:</strong> Declara una variable de tipus <code>Char</code> i converteix-la a majúscula utilitzant una funció integrada.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">lletra</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;b&#39;</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="n">println</span><span class="p">(</span><span class="n">lletra</span><span class="p">.</span><span class="na">uppercaseChar</span><span class="p">())</span><span class="w"> </span><span class="c1">// Converteix a majúscula</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h2 id="9-operacions-aritmetiques">9. Operacions aritmètiques</h2>
+<h3 id="exercici-91">Exercici 9.1:</h3>
+<p><strong>Enunciat:</strong> Declara dues variables <code>var</code> de tipus <code>Int</code>, realitza una suma i mostra el resultat.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kd">var</span><span class="w"> </span><span class="nv">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">7</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kd">var</span><span class="w"> </span><span class="nv">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">suma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">num2</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;La suma és </span><span class="si">$</span><span class="n">suma</span><span class="s">&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-92">Exercici 9.2:</h3>
+<p><strong>Enunciat:</strong> Declara dues variables <code>Double</code>, realitza una divisió i mostra el resultat.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span>
+<span class="normal"><a href="#__codelineno-25-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">9.0</span>
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.0</span>
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">divisio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">num2</span>
+</span><span id="__span-25-4"><a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;La divisió és </span><span class="si">$</span><span class="n">divisio</span><span class="s">&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+<h3 id="exercici-93">Exercici 9.3:</h3>
+<p><strong>Enunciat:</strong> Declara dues variables, realitza una resta i una multiplicació, i mostra els resultats.</p>
+<details class="info">
+<summary>Solució</summary>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">Kotlin</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span>
+<span class="normal"><a href="#__codelineno-26-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>
+</span><span id="__span-26-2"><a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">num2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">4</span>
+</span><span id="__span-26-3"><a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">resta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">num2</span>
+</span><span id="__span-26-4"><a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">multiplicacio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">num1</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">num2</span>
+</span><span id="__span-26-5"><a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;La resta és </span><span class="si">$</span><span class="n">resta</span><span class="s">&quot;</span><span class="p">)</span>
+</span><span id="__span-26-6"><a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="n">println</span><span class="p">(</span><span class="s">&quot;La multiplicació és </span><span class="si">$</span><span class="n">multiplicacio</span><span class="s">&quot;</span><span class="p">)</span>
+</span></code></pre></div></td></tr></table></div>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+        
+      
+      <nav class="md-footer__inner md-grid" aria-label="Peu de pàgina" >
+        
+        
+          
+          <a href="../exercicis_fluxe/" class="md-footer__link md-footer__link--next" aria-label="Següent: Control de flux">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Següent
+              </span>
+              <div class="md-ellipsis">
+                Control de flux
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright - Sebastian Ciscar - Professor Departament d'Informàtica IES Jaume II el Just (Tavernes de la Valldigna)
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "content.code.copy", "content.code.annotate", "content.code.select", "navigation.footer"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiat al porta-retalls", "clipboard.copy": "C\u00f2pia al porta-retalls", "search.result.more.one": "1 m\u00e9s en aquesta p\u00e0gina", "search.result.more.other": "# m\u00e9s en aquesta p\u00e0gina", "search.result.none": "Cap document coincideix", "search.result.one": "1 document coincident", "search.result.other": "# documents coincidents", "search.result.placeholder": "Escriu per a comen\u00e7ar a cercar", "search.result.term.missing": "Desaparegut", "select.version": "Selecciona la versi\u00f3"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+    
+  </body>
+</html>
